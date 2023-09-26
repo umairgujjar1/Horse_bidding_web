@@ -22,14 +22,14 @@
         <!-- The slideshow -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{ asset('images/banner/banner1.jpg') }}" class="d-block w-100" alt="Los Angeles">
+                <img src="{{ asset('images/banner/banner4.jpg') }}" class="d-block w-100" alt="Los Angeles">
+            </div>
+            {{-- <div class="carousel-item">
+                <img src="{{ asset('images/banner/banner5.jpg') }}" class="d-block w-100" alt="Chicago">
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('images/banner/banner2.jpg') }}" class="d-block w-100" alt="Chicago">
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('images/banner/banner3.jpg') }}" class="d-block w-100" alt="New York">
-            </div>
+                <img src="{{ asset('images/banner/banner6.jpg') }}" class="d-block w-100" alt="New York">
+            </div> --}}
         </div>
 
         <!-- Left and right controls -->
@@ -60,7 +60,7 @@
                     <div class="features_items">
 
 
-                        <h2 class="title text-center">All Auction</h2>
+                        <h2 class="title text-center">Latest Autions</h2>
                         @if (!empty($all_auctions))
                             @foreach ($all_auctions as $auction)
                                 <div class="col-sm-3" >
@@ -94,7 +94,7 @@
                                                     </div>
                                                     <hr>
                                                     <div class="d-flex justify-content-between total font-weight-bold mt-4">
-                                                        <span>Total Price</span><span>{{ $auction->weight }}</span>
+                                                        <span>Total Price</span><span>${{ $auction->price }}</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -108,6 +108,7 @@
 
 
                     </div>
+                    <a href="{{url('all-aution')}}" class="btn  btn-success" style="width:75px;display: block;margin:auto">View more</a>
                 </div>
             </div>
     </section>

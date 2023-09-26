@@ -32,11 +32,11 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                
+
                                 <h3 style="font-size:20px"> <img src="{{asset('images/logo/logo5.png')}}" alt=""
                                         style="width: 70px;margin:3px ">
                                     Bidding Website</h3>
-                            
+
                     <!-- {{ config('app.name', 'Horse Bidding') }} -->
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"

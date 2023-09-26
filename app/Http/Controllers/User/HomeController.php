@@ -16,7 +16,7 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         // $all_auctions = DB::select("select * from autions");
-        $all_auctions = Aution::all();
+        $all_auctions = Aution::orderBy('id','desc')->take(8)->get();
 
         if (!empty($request->get('search'))) {
 
@@ -27,6 +27,17 @@ class HomeController extends Controller
 
 
         return view('User/home')->with("all_auctions", $all_auctions);
+    }
+    public function allAutions(Request $request)
+    {
+        // $all_auctions = DB::select("select * from autions");
+        $all_auctions = Aution::all();
+
+
+        // $all_auctions =$auctions;
+
+
+        return view('User.all_autions')->with("all_auctions", $all_auctions);
     }
 
     public function view_auction_detail($id)

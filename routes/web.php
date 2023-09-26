@@ -2,12 +2,17 @@
 
 use App\Http\Controllers\User\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StripeController;
 
 
 
 // Route::get('admin', function () {
 //     return view('Admin/admin_layout');
 // });
+
+
+Route::get('stripe/{id?}', [StripeController::class, 'stripe'])->name('stripe');
+Route::post('stripe', [StripeController::class, 'stripePost'])->name('stripe.post');
 
 /////////// Admin Panel Routes ////////////////////////////////
 
@@ -97,6 +102,7 @@ Route::match(['get', 'post'],'save-newsletter', "User\HomeController@save_newsle
 Route::get("contact",function(){
 	return view("User/contact");
 });
+Route::get('all-aution',"User\HomeController@allAutions");
 Route::post('save-contact',"User\HomeController@store_contact");
 Route::get('delete/message/{id}',"User\HomeController@delete_contact");
 Route::post('user-save-bid',"User\HomeController@store_bid");
@@ -132,6 +138,9 @@ Route::get('/admin-add-categorey', function () {
 Route::post('admin-save-add-categorey','Admin\CategoreyController@store');
 
 Route::get('admin-view-categories',"Admin\CategoreyController@index");
+
+
+Route::get('admin_dashboard',"Admin\CategoreyController@dashboard")->name('admin.dashboard');
 
 Route::get('/admin-add-user', function () {
     return view('Admin/User/add_user');
@@ -195,3 +204,5 @@ Route::get('/pending_bid',function(){
 return view('User.bids.pending_bid');
 });
 Route::get('/bids',[HomeController::class,'bids'])->name('bids');
+
+// stripe route

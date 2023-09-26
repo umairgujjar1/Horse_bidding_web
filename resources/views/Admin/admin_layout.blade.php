@@ -91,7 +91,7 @@
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
 
-						<li><a href="{{URL::to('home')}}"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>
+						<li><a href="{{route('admin.dashboard')}}"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>
 
 						<li><a href="{{URL::to('admin-view-users')}}"><i class="icon-bar-chart"></i><span class="hidden-tablet">All Users</span></a></li>
 

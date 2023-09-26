@@ -20,6 +20,7 @@ class BidController extends Controller
 
         $select = Bid::with('user')->get();
 
+
         // $user = $bid->user; // Retrieves the associated user
 
 

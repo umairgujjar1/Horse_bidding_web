@@ -16,12 +16,9 @@
 </style>
 @section('content')
 <div class="jumbotron jumbotron-fluid">
-  <div class="fluid-container text-center">
-    <h1 class="display-4">About Us</h1>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum justo et turpis fermentum, nec pharetra nunc volutpat.</p>
-  </div>
 
-<div class="fluid-container m-5">
+
+<div class="fluid-container m-5" >
   <div class="row">
     <div class="col-md-6 image-slider">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -30,7 +27,7 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner">
+        <div class="carousel-inner" style="width: 600px;height:500px">
           <div class="carousel-item active">
             <img src="{{asset('images/about/about (1).jpg')}}" class="d-block w-100vh" alt="Slider Image 1">
           </div>

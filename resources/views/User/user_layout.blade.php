@@ -60,50 +60,6 @@
         height: 650px;
     }
 
-    /* .btn {
-        margin-top: 26px;
-        margin-right: 8px;
-        padding: 5px;
-        width: 80px;
-        background: none;
-        border: 2px solid #fff;
-        font-size: 15px;
-        color: #131313;
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-        transition: all 0.3s;
-        border-radius: 7px;
-        background-color: #ecd448;
-        font-weight: bolder;
-        box-shadow: 0 1px 5px 1px #5ba14f;
-    }
-
-    .btn:before {
-        content: "";
-        position: absolute;
-        width: 100px;
-        height: 120%;
-
-        top: 50%;
-        transform: skewX(30deg) translate(-150%, -50%);
-        transition: all 0.5s;
-    }
-
-    .btn:hover {
-        background-color: #4cc9f0;
-        color: #fff;
-        box-shadow: 0 2px 0 2px #0d3b66;
-    }
-
-    .btn:hover::before {
-        transform: skewX(30deg) translate(150%, -50%);
-        transition-delay: 0.1s;
-    }
-
-    .btn:active {
-        transform: scale(0.9);
-    } */
 
     .search {
         display: inline-block;
@@ -153,8 +109,8 @@
                     <div class="col-2">
                         <div class="logo pull-left">
                             <a href="{{url('/')}}">
-                                <h3 style="font-size:20px"> <img src="{{ asset('images/logo/logo5.png') }}"
-                                        alt="" style="width: 70px;margin:10px ">
+                                <h3 style="font-size:15px"> <img src="{{ asset('images/logo/logo5.png') }}"
+                                        alt="" style="width: 40px;margin:10px ;">
                                     Horse Bidding </h3>
                             </a>
                         </div>
@@ -162,7 +118,7 @@
                     </div>
 
 
-                    <div class="header-bottom col-8" style="padding: 30px;">
+                    <div class="header-bottom col-8" style="padding: 20px;">
                         <div class="container">
 
                             <div class="navbar-header">
@@ -178,15 +134,18 @@
                             <div class="mainmenu pull-left ">
                                 <ul class="nav navbar-nav collapse navbar-collapse">
                                     <li><a href="{{ url('home') }}" class="active"
-                                            style=" font-weight:bolder ;font-size:24px ">Home</a></li>
-                                    <li><a href="{{ url('about') }}" style=" font-weight:bolder ;font-size:17px ">All
-                                            Autions</a></li>
+                                            style=" font-weight:bolder ;font-size:20px ">Home</a></li>
+                                    <li><a href="{{ url('all-aution') }}"
+                                            style=" font-weight:bolder ;font-size:15px ">All Autions</a></li>
+
                                     <li><a href="{{ url('about') }}"
-                                            style=" font-weight:bolder ;font-size:17px ">About</a></li>
+                                            style=" font-weight:bolder ;font-size:15px ">About</a></li>
                                     <li><a href="{{ url('contact') }}"
-                                            style=" font-weight:bolder ;font-size:17px ">Contact</a></li>
+                                            style=" font-weight:bolder ;font-size:15px ">Contact</a></li>
                                     <li><a href="{{ url('newsletter') }}"
-                                            style=" font-weight:bolder ;font-size:17px ">Newsletter</a></li>
+                                            style=" font-weight:bolder ;font-size:15px ">Newsletter</a></li>
+                                            <li><a href="{{ url('about') }}"
+                                                style=" font-weight:bolder ;font-size:15px ">About us</a></li>
                                 </ul>
 
                             </div>

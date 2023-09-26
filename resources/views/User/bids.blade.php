@@ -31,20 +31,7 @@
                           <p><span class="text-muted">Bid Date: </span> {{$product->created_at->diffForHumans()}}
                           </p>
                         </div>
-                        {{-- <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                          <button class="btn btn-link px-2"
-                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                            <i class="fas fa-minus"></i>
-                          </button>
 
-                          <input id="form1" min="0" name="quantity" value="2" type="number"
-                            class="form-control form-control-sm" />
-
-                          <button class="btn btn-link px-2"
-                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                            <i class="fas fa-plus"></i>
-                          </button>
-                        </div> --}}
                         <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                           <h4 class="mb-0">${{$product->bid_amount}}</h4>
                           <h5 class="small text-secondary text-decoration-line-through" style=" text-decoration: line-through;">${{$product->aution_price}}</h5>
@@ -55,7 +42,7 @@
                             @if ($product->status == "approved")
                                 <p style="color: green;font-weight:bolder">Bid Has Been Accepted</p>
 
-                                <button class="btn btn-success">Payment Now</button>
+                                <a href="{{route('stripe')}}/{{$product->id}}"> <button class="btn btn-success">Payment Now</button></a>
                                 @else
 
                                 <a href="{{url('/delete_cart')}}/{{$product->id}}" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
