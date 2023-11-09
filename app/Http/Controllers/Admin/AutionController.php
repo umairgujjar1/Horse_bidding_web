@@ -27,6 +27,7 @@ class AutionController extends Controller
 // $insert->end_date =>$request['end_date'];
 // $insert->status =>$request['status'];
 
+
 $imageName = time().'.'.$request->image->extension();
 
 $insert = DB::insert("insert into autions values(?,?,?,?,?,?,?,?,?,?,?,?,?)",[null,$request->title,$request->categorey,$request->type,$request->age,$request->height,$request->description,$request->weight,$request->price,$imageName,$request->start_date,$request->end_date,$request->status,]);

@@ -21,6 +21,7 @@
 <div class="fluid-container m-5" >
   <div class="row">
     <div class="col-md-6 image-slider">
+
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>

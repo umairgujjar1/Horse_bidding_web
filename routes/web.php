@@ -14,6 +14,7 @@ use App\Http\Controllers\StripeController;
 Route::get('stripe/{id?}', [StripeController::class, 'stripe'])->name('stripe');
 Route::post('stripe', [StripeController::class, 'stripePost'])->name('stripe.post');
 
+
 /////////// Admin Panel Routes ////////////////////////////////
 
 

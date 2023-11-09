@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Aution extends Model
 {
+
     use HasFactory;
     protected $table="autions";
     protected $primayKey="id";
